@@ -236,8 +236,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     for (int i = 0;
                          i < response.body().getRoutes()[j].getLegs()[0].getSteps().length
                             ; i++) {
-                        Double lat = response.body().getRoutes()[0].getLegs()[0].getSteps()[i].getEnd_location().getLat();
-                        Double lng = response.body().getRoutes()[0].getLegs()[0].getSteps()[i].getEnd_location().getLng();
+                        Double lat = response.body().getRoutes()[j].getLegs()[0].getSteps()[i].getEnd_location().getLat();
+                        Double lng = response.body().getRoutes()[j].getLegs()[0].getSteps()[i].getEnd_location().getLng();
 
                         mMap.addCircle(new CircleOptions()
                                 .center(new LatLng(lat, lng))
